@@ -9,3 +9,5 @@ This pipeline has the following stages:
 5. Allocating the label as determined by the model.
 
 It is recommended that the accuracy of the predictions be manually assessed by a Subject Matter Expert periodically.
+
+This commit is a prototype, needs some bug-fixing and cannot yet be considered suitable for implementation.
