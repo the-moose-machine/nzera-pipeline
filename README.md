@@ -8,4 +8,4 @@ This pipeline has the following stages:
 4. Obtaining the outcome of the new case by passing it through a pre-trained model
 5. Allocating the label as determined by the model.
 
-It is recommended that the accuracy of the predictions by manually assessed by a Subject Matter Expert frequently.
+It is recommended that the accuracy of the predictions be manually assessed by a Subject Matter Expert periodically.
