@@ -9,8 +9,8 @@ corpus = "/home/moose/Documents/Education/allText.txt"
 incl_det = False 
 labels, all_data = get_documents(collection, incl_det=incl_det)
 
-file_name = '2015_1_090'
-# Locate all paragraphs of a new document: 2005_1_035
+file_name = '2015_1_090' # This needs to be adjusted to grab the name of the new document
+# Locate all paragraphs of a new document: 2015_1_090
 merged_paragraphs = findAllParagraphs(collection, file_name, incl_det)
 # Extract content of relevant paragraphs
 TOKEN_REGEX = re.compile("[^$A-Za-z0-9 ]+")
@@ -45,7 +45,7 @@ reduced_new_document = ' '.join(word for word in semantic_features)
 # Tokenization
 n_components = 5 
 selected_topics = [i for i in range(0,n_components)] 
-cluster_labels = [0, 3, 4, 4, 4, 4, 0, 4, 4, 4, 0, 3, 3, 0, 0, 4, 0, 0, 3, 0, 3, 0, 4, 3, 4, 4, 4, 3, 0, 4, 4, 3, 4, 0, 3, 4, 3, 4, 0, 4, 4, 4, 0, 0, 0, 0, 4, 0, 0, 3, 0, 4, 4, 0, 0, 0, 4, 4, 0, 4, 4, 4, 0, 4, 0, 0, 0, 4, 0, 3, 4, 4, 4, 4, 3, 0, 4, 0, 0, 0, 4, 4, 0, 3, 4, 4, 3, 0, 4, 4, 4, 4, 4, 0, 4, 0, 4, 4, 4, 4, 0, 4, 3, 0, 4, 4, 0, 4, 0, 3, 0, 4, 4, 4, 0, 4, 4, 4, 0, 4, 4, 4, 0, 4, 3, 4, 4, 4, 4, 0, 0, 4, 4, 4, 0, 4, 3, 4, 0, 4, 3, 4, 0, 0, 4, 4, 3, 3, 4, 3, 4, 4, 4, 0, 0, 0, 0, 0, 4, 4, 4, 3, 0, 4, 0, 0, 4, 0, 0, 0, 0, 3, 4, 4, 0, 4, 0, 4, 0, 4, 4, 4, 0, 4, 0, 4, 4, 0, 4, 4, 4, 3, 4, 3, 4, 0, 0, 4, 4, 0, 3, 0, 0, 0, 0, 4, 4, 0, 3, 0, 0, 0, 4, 4, 4, 0, 0, 0] # unsure of this. Is this always the same?
+cluster_labels = [0, 3, 4, 4, 4, 4, 0, 4, 4, 4, 0, 3, 3, 0, 0, 4, 0, 0, 3, 0, 3, 0, 4, 3, 4, 4, 4, 3, 0, 4, 4, 3, 4, 0, 3, 4, 3, 4, 0, 4, 4, 4, 0, 0, 0, 0, 4, 0, 0, 3, 0, 4, 4, 0, 0, 0, 4, 4, 0, 4, 4, 4, 0, 4, 0, 0, 0, 4, 0, 3, 4, 4, 4, 4, 3, 0, 4, 0, 0, 0, 4, 4, 0, 3, 4, 4, 3, 0, 4, 4, 4, 4, 4, 0, 4, 0, 4, 4, 4, 4, 0, 4, 3, 0, 4, 4, 0, 4, 0, 3, 0, 4, 4, 4, 0, 4, 4, 4, 0, 4, 4, 4, 0, 4, 3, 4, 4, 4, 4, 0, 0, 4, 4, 4, 0, 4, 3, 4, 0, 4, 3, 4, 0, 0, 4, 4, 3, 3, 4, 3, 4, 4, 4, 0, 0, 0, 0, 0, 4, 4, 4, 3, 0, 4, 0, 0, 4, 0, 0, 0, 0, 3, 4, 4, 0, 4, 0, 4, 0, 4, 4, 4, 0, 4, 0, 4, 4, 0, 4, 4, 4, 3, 4, 3, 4, 0, 0, 4, 4, 0, 3, 0, 0, 0, 0, 4, 4, 0, 3, 0, 0, 0, 4, 4, 4, 0, 0, 0] # For testing purposes
 data = get_semantic_features(all_data, topics_word_list, selected_topics, cluster_labels) # This does not include the new document
 
 #vocab_processor = tf.contrib.learn.preprocessing.VocabularyProcessor(281)
